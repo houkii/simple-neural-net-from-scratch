@@ -37,7 +37,6 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -85,7 +84,6 @@
             this.tabPage2.Controls.Add(this.clearButton);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.pictureBox1);
@@ -98,18 +96,18 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(631, 427);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Rozpoznawanie";
+            this.tabPage2.Text = "Recognizing";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(71, 194);
+            this.label10.Location = new System.Drawing.Point(53, 194);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(67, 13);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Wykryto:";
+            this.label10.Text = "Recognized:";
             // 
             // textBox3
             // 
@@ -139,7 +137,7 @@
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 16;
-            this.clearButton.Text = "Wyczyść";
+            this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click_1);
             // 
@@ -147,43 +145,32 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(31, 360);
+            this.label6.Location = new System.Drawing.Point(21, 360);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Linia";
+            this.label6.Text = "Line size";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(47, 229);
+            this.label5.Location = new System.Drawing.Point(94, 229);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Narysuj aby rozpoznać:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(83, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Podgląd";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label5.Text = "Draw:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(8, 6);
+            this.label3.Location = new System.Drawing.Point(65, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 13);
+            this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Wczytaj z obrazka:";
+            this.label3.Text = "Read from file:";
             // 
             // button6
             // 
@@ -193,7 +180,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 10;
-            this.button6.Text = "Rozpoznaj";
+            this.button6.Text = "Recognize";
             this.button6.UseCompatibleTextRendering = true;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -228,28 +215,28 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Baza (Nazwa znaku)";
+            this.columnHeader3.Text = "Symbol";
             this.columnHeader3.Width = 139;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Waga";
+            this.columnHeader4.Text = "Activation";
             this.columnHeader4.Width = 135;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Trafność [%]";
+            this.columnHeader5.Text = "Activation [%]";
             this.columnHeader5.Width = 102;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(8, 153);
+            this.button1.Location = new System.Drawing.Point(8, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Załaduj";
+            this.button1.Text = "Load";
             this.button1.UseCompatibleTextRendering = true;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -258,11 +245,11 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(126, 153);
+            this.button3.Location = new System.Drawing.Point(126, 140);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Sprawdź";
+            this.button3.Text = "Recognize";
             this.button3.UseCompatibleTextRendering = true;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -307,7 +294,8 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(631, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Uczenie";
+            this.tabPage1.Text = "Teaching";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // textBox2
             // 
@@ -324,9 +312,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(8, 259);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 13);
+            this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "współczynnik uczenia:";
+            this.label7.Text = "Learning rate:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label2
@@ -334,18 +322,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 298);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 13);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "maksymalna ilosc epok:";
+            this.label2.Text = "Max epoch count:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 88);
+            this.label1.Location = new System.Drawing.Point(40, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 39);
+            this.label1.Size = new System.Drawing.Size(145, 29);
             this.label1.TabIndex = 12;
-            this.label1.Text = " 1. Wybierz folder bazy\r\n danych uczących\r\n2. Naucz sieć neuronową";
+            this.label1.Text = "1. Choose folder                     2. Teach neural net";
+            this.label1.UseMnemonic = false;
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // listView1
@@ -366,12 +354,12 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "epoka";
+            this.columnHeader1.Text = "epoch";
             this.columnHeader1.Width = 206;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "błąd";
+            this.columnHeader2.Text = "error";
             this.columnHeader2.Width = 173;
             // 
             // textBox1
@@ -390,7 +378,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Ucz sieć";
+            this.button2.Text = "Teach";
             this.button2.UseCompatibleTextRendering = true;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -402,7 +390,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(190, 23);
             this.button4.TabIndex = 10;
-            this.button4.Text = "Wybierz folder";
+            this.button4.Text = "Choose folder";
             this.button4.UseCompatibleTextRendering = true;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -426,7 +414,7 @@
             this.ClientSize = new System.Drawing.Size(639, 453);
             this.Controls.Add(this.tabControl1);
             this.Name = "Main";
-            this.Text = "Sieci neuronowe - projekt v0.41 - Release";
+            this.Text = "simple neural net";
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -452,7 +440,6 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;

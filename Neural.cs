@@ -11,8 +11,6 @@ using System.IO;
 using System.Drawing.Imaging;
 
 namespace WindowsFormsApplication
-    
-
 {
     public partial class Main : Form
     {
@@ -70,11 +68,9 @@ namespace WindowsFormsApplication
             {
                 InputNum = inputSize;
                 OutputNum = outputSize;
-
                 inputLayer = new Network.InputLayer[inputSize];
                 outputLayer = new Network.OutputLayer[outputSize];
-
-                
+ 
                 Random random = new Random();
 
                 for (int i = 0; i < InputNum; ++i)
@@ -83,7 +79,7 @@ namespace WindowsFormsApplication
 
                     for (int j = 0; j < OutputNum; ++j)
                     {
-                        inputLayer[i].Weights[j] = random.Next(1, 3) / 100.0;   //inicjacja 0.01-0.02
+                        inputLayer[i].Weights[j] = random.Next(1, 3) / 100.0;
                     }
                 }
             }
@@ -115,7 +111,6 @@ namespace WindowsFormsApplication
                 }
                 while (currentError > maximumError && currIter < maxIter);
 
-
                 if (currIter <= maxIter)
                 {
                     return true;
@@ -126,7 +121,6 @@ namespace WindowsFormsApplication
 
             public void CalculateOutput(double[] pattern, string output)
             {
-                // przepisz obraz z .bmp
                 for (int i = 0; i < pattern.Length; i++)
                 {
                     inputLayer[i].Value = pattern[i];
@@ -138,7 +132,7 @@ namespace WindowsFormsApplication
 
                     for (int j = 0; j < InputNum; j++)
                     {
-                        total += inputLayer[j].Value * inputLayer[j].Weights[i];       //waga * input 
+                        total += inputLayer[j].Value * inputLayer[j].Weights[i];       //weight * input 
                     }
 
                     outputLayer[i].InputSum = total;
@@ -189,9 +183,8 @@ namespace WindowsFormsApplication
 
                     for (int j = 0; j < InputNum; j++)
                     {
-                        total += inputLayer[j].Value * inputLayer[j].Weights[i];    //
+                        total += inputLayer[j].Value * inputLayer[j].Weights[i];    
                     }
-
                     outputLayer[i].InputSum = total;
                     outputLayer[i].Output = Activation(total);
                 }
@@ -204,15 +197,13 @@ namespace WindowsFormsApplication
         {
             InitializeComponent();
          
-            //rysowanie w rozpoznawaniu
+            //drawing to recognize
             pictureBox2.Image = new Bitmap(112, 112);
             g = Graphics.FromImage(pictureBox2.Image);
             pioro = new Pen(Color.Black);
             pioro.Width = trackBar1.Value;
             g.SmoothingMode = SmoothingMode.AntiAlias;
         }
-
-       
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
@@ -235,7 +226,7 @@ namespace WindowsFormsApplication
                 listView1.Items.Clear();
                 int imageSize = Bitmap.FromFile(files[0]).Width;
 
-                // input layer - rozmiar obrazu, output layer - ilosc plikow
+                // input layer
                 network.Initialize(imageSize * imageSize, files.Length);
 
                 double[][] inputs = new double[files.Length][];
@@ -266,7 +257,7 @@ namespace WindowsFormsApplication
                     FileInfo info = new FileInfo(files[i]);
                     network.outputLayer[i].Value = info.Name.Replace(".bmp", "");
                 }
-                // trenuj
+                // train
                 network.TrainNetwork(inputs, outputs);
             }
             else
@@ -281,8 +272,6 @@ namespace WindowsFormsApplication
                 ListViewItem item = listView1.Items.Add(i.ToString());
                 item.SubItems.Add(network.errors[i].ToString("#0.000000"));
                 ErrorString += network.errors[i].ToString("#0.000000") + " ";
-                //var temp3 = (int)(network.errors[i] * 100);
-                //item.SubItems.Add(temp3.ToString());
             }
             System.IO.File.WriteAllText(@"D:\path.txt", ErrorString);
             _learning++;
@@ -309,11 +298,10 @@ namespace WindowsFormsApplication
                             sample[x * imageSize + y] = (1.0 - (pixel.R / 255.0 + pixel.G / 255.0 + pixel.B / 255.0) / 3.0) < 0.5 ? 0.0 : 1.0;
                         }
                     }
-
                     network.Recognize(sample);
 
 
-                    // pokaz output
+                    // show output
                     listView2.Items.Clear();
 
 
@@ -335,7 +323,7 @@ namespace WindowsFormsApplication
                             }
                         }
                     }
-                    else { MessageBox.Show("naucz sieć"); }
+                    else { MessageBox.Show("teach"); }
                 }
                 else
                 {
@@ -434,7 +422,7 @@ namespace WindowsFormsApplication
 
             network.Recognize(sample);
 
-            // wyswietl output
+            // show output
             listView2.Items.Clear();
 
             if (_learning != 0)
@@ -458,7 +446,7 @@ namespace WindowsFormsApplication
                 }
                 else
                 {
-                MessageBox.Show("pole jest puste");
+                MessageBox.Show("field is empty");
                 }
             }
             else {
@@ -466,11 +454,11 @@ namespace WindowsFormsApplication
                 {
                     _on++;
                     folderBrowserDialog1.ShowDialog();
-                    MessageBox.Show("Najpierw naucz sieć");
+                    MessageBox.Show("teach the net first");
                 }
                 else
                 {
-                    MessageBox.Show("Najpierw naucz sieć");
+                    MessageBox.Show("teach the net first");
                 }
             }
 
@@ -626,6 +614,11 @@ namespace WindowsFormsApplication
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
