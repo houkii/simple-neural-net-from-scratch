@@ -1,0 +1,8 @@
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\neurony.csprojResolveAssemblyReference.cache
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\WindowsFormsApplication.Main.resources
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\neurony.csproj.GenerateResource.Cache
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\bin\Debug\Sieci neuronowe - projekt.exe
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\bin\Debug\Sieci neuronowe - projekt.pdb
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\Neron.Properties.Resources.resources
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\Sieci neuronowe - projekt.exe
+C:\Users\houkii\Desktop\praca mgr\Sieci neuronowe\release\projekt\pliki projektu\obj\x86\Debug\Sieci neuronowe - projekt.pdb
