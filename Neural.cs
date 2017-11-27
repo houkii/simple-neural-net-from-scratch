@@ -32,7 +32,6 @@ namespace WindowsFormsApplication
         string sSign;
         double dOutput = 0;
         
-
         private class Network
         {
             public struct InputLayer
@@ -300,10 +299,8 @@ namespace WindowsFormsApplication
                     }
                     network.Recognize(sample);
 
-
                     // show output
                     listView2.Items.Clear();
-
 
                     if (_learning != 0)
                     {
@@ -343,11 +340,6 @@ namespace WindowsFormsApplication
         {
             _on++;
             folderBrowserDialog1.ShowDialog();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -394,7 +386,6 @@ namespace WindowsFormsApplication
             dialog2.Filter = "bmp|*.bmp";
             dialog2.ShowDialog();    
         }
-
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -465,22 +456,6 @@ namespace WindowsFormsApplication
             dOutput = 0;
         }
 
-
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
- 
-        }
-
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void clearButton_Click(object sender, EventArgs e)
         {
 
@@ -494,32 +469,6 @@ namespace WindowsFormsApplication
             }
         }
 
-        private void clearButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             _drawing = 1;
@@ -529,16 +478,6 @@ namespace WindowsFormsApplication
         {
             g.Clear(Color.White);
             pictureBox2.Refresh();
-        }
-
-        private void clearButton2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -557,11 +496,6 @@ namespace WindowsFormsApplication
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -577,50 +511,10 @@ namespace WindowsFormsApplication
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             pioro.Width = trackBar1.Value;
             pioro.DashOffset = 1;
-        }
-
-        private void trackBar2_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
